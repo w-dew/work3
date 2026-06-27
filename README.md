@@ -12,17 +12,17 @@
 
 ## <font style="color:rgb(15, 17, 21);">核心算法：De Casteljau</font>
 ### <font style="color:rgb(15, 17, 21);">数学原理</font>
-<font style="color:rgb(15, 17, 21);">贝塞尔曲线由一组控制点</font>$ P_0,P_1,.......,P_{n-1} $<font style="color:rgb(15, 17, 21);">定义，参数 t∈[0,1]</font>_<font style="color:rgb(15, 17, 21);">t</font>_<font style="color:rgb(15, 17, 21);">∈[0,1] 控制曲线上的位置。</font>
+<font style="color:rgb(15, 17, 21);">贝塞尔曲线由一组控制点</font>$$ P_0,P_1,.......,P_{n-1} $$<font style="color:rgb(15, 17, 21);">定义，参数 t∈[0,1]</font>_<font style="color:rgb(15, 17, 21);">t</font>_<font style="color:rgb(15, 17, 21);">∈[0,1] 控制曲线上的位置。</font>
 
 <font style="color:rgb(15, 17, 21);">De Casteljau 算法通过递归线性插值计算曲线点：</font>
 
 1. **<font style="color:rgb(15, 17, 21);">第一层插值</font>**<font style="color:rgb(15, 17, 21);">：对相邻控制点进行线性插值</font>
 
-<font style="color:rgb(15, 17, 21);">  		   </font>$ P_i^{(1)}=(1−t)⋅P_i+t⋅P_{i+1},i=0,1,...,n−2 $
+<font style="color:rgb(15, 17, 21);">  		   </font>$$ P_i^{(1)}=(1−t)⋅P_i+t⋅P_{i+1},i=0,1,...,n−2 $$
 
 2. **<font style="color:rgb(15, 17, 21);">递归计算</font>**<font style="color:rgb(15, 17, 21);">：对得到的新点重复插值，直到只剩 1 个点</font>
 
-<font style="color:rgb(15, 17, 21);">  		  </font>$ P_i^{(k)}=(1−t)⋅P_i^{(k−1)}+t⋅P_{i+1}^{(k−1)} $
+<font style="color:rgb(15, 17, 21);">  		  </font>$$ P_i^{(k)}=(1−t)⋅P_i^{(k−1)}+t⋅P_{i+1}^{(k−1)} $$
 
 3. **<font style="color:rgb(15, 17, 21);">终止条件</font>**<font style="color:rgb(15, 17, 21);">：最终得到的唯一点即为曲线在参数 t</font>_<font style="color:rgb(15, 17, 21);">t</font>_<font style="color:rgb(15, 17, 21);"> 处的位置</font>
 
