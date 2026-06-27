@@ -12,7 +12,7 @@
 
 ## <font style="color:rgb(15, 17, 21);">核心算法：De Casteljau</font>
 ### <font style="color:rgb(15, 17, 21);">数学原理</font>
-<font style="color:rgb(15, 17, 21);">贝塞尔曲线由一组控制点$$ P_0,P_1,.......,P_{n-1} $$定义，参数 t∈[0,1]</font>_<font style="color:rgb(15, 17, 21);">t</font>_<font style="color:rgb(15, 17, 21);">∈[0,1] 控制曲线上的位置。</font>
+<font style="color:rgb(15, 17, 21);">贝塞尔曲线由一组控制点 $$ P_0,P_1,.......,P_{n-1} $$ 定义，参数 t∈[0,1]</font>_<font style="color:rgb(15, 17, 21);">t</font>_<font style="color:rgb(15, 17, 21);">∈[0,1] 控制曲线上的位置。</font>
 
 <font style="color:rgb(15, 17, 21);">De Casteljau 算法通过递归线性插值计算曲线点：</font>
 
